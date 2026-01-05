@@ -1,0 +1,11 @@
+# Node
+node_modules
+.env
+
+# .NET
+bin/
+obj/
+
+# IDE
+.vscode/
+.idea/
