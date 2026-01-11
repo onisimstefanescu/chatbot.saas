@@ -295,25 +295,29 @@ form.addEventListener('submit', async function(e) {
     submitButton.innerHTML = '<span class="spinner"></span> Se trimite...';
     submitButton.disabled = true;
 
-    const formData = {
+    // Prepare data for API
+    const leadData = {
         name: name,
         email: email,
-        website: document.getElementById('website').value.trim(),
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        referrer: document.referrer
+        site: "chatinteligent.ro"
     };
 
     try {
-        console.log('Form submitted:', formData);
+        // Send to backend API
+        const response = await fetch('https://chatbot-api-production-f14a.up.railway.app/lead', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(leadData)
+        });
 
-        // Store in localStorage
-        let submissions = JSON.parse(localStorage.getItem('earlyAccessSubmissions') || '[]');
-        submissions.push(formData);
-        localStorage.setItem('earlyAccessSubmissions', JSON.stringify(submissions));
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        const result = await response.json();
+        console.log('Lead submitted successfully:', result);
 
         // Success animation
         formContainer.style.opacity = '0';
@@ -340,11 +344,11 @@ form.addEventListener('submit', async function(e) {
 
         // Show error message
         const errorMsg = document.createElement('div');
-        errorMsg.style.cssText = 'color: #ef4444; margin-top: 1rem; text-align: center;';
+        errorMsg.style.cssText = 'color: #ef4444; margin-top: 1rem; text-align: center; padding: 1rem; background: #fee; border-radius: 8px;';
         errorMsg.textContent = 'A apărut o eroare. Te rugăm să încerci din nou.';
         form.appendChild(errorMsg);
 
-        setTimeout(() => errorMsg.remove(), 3000);
+        setTimeout(() => errorMsg.remove(), 5000);
 
         submitButton.innerHTML = originalText;
         submitButton.disabled = false;
