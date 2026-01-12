@@ -8,13 +8,23 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
 
             // Get form data
+            const company = document.getElementById('company').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Grupăm company, phone și message în câmpul "site"
+            let siteInfo = message;
+            if (company || phone) {
+                siteInfo = '';
+                if (company) siteInfo += `Firma: ${company}\n`;
+                if (phone) siteInfo += `Telefon: ${phone}\n`;
+                siteInfo += `\nMesaj:\n${message}`;
+            }
+
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
-                company: document.getElementById('company').value,
-                phone: document.getElementById('phone').value,
-                message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
+                site: siteInfo
             };
 
             // Get submit button
@@ -26,15 +36,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Se trimite...';
 
-                // Send to Google Apps Script Web App
-                const response = await fetch('https://script.google.com/macros/s/AKfycbyIgzHLcQ2P-Yr_eNgHACdmY7kE5v7tWKzKCNk0lMAmB3-gHCHaKJHq_YZ8B7BYU32B/exec', {
+                // Send to Railway API endpoint
+                const response = await fetch('https://chatbot-api-production-f14a.up.railway.app/lead', {
                     method: 'POST',
-                    mode: 'no-cors',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(formData)
                 });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                console.log('Contact form submitted successfully:', result);
 
                 // Hide form and show success message
                 contactForm.style.display = 'none';
