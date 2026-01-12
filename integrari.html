@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrări - Chat Inteligent</title>
+    <meta name="description" content="Integrări disponibile pentru Chat Inteligent: website, email, Google Sheets, WordPress și alte platforme.">
+    <link rel="icon" type="image/png" href="images/icons8-chatbot-32.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                        <img src="images/icons8-chatbot.gif" alt="ChatBot" class="logo-gif">
+                        Chat Inteligent
+                    </a>
+                </div>
+                <a href="index.html#early-access" class="btn btn-secondary">Programează Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Integrations Hero -->
+    <section class="integrations-hero">
+        <div class="container">
+            <div class="integrations-hero-content">
+                <h1>Integrări Simple și Directe</h1>
+                <p>Chat Inteligent funcționează pe orice site web și se integrează cu instrumentele pe care le folosești deja.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Integration -->
+    <section class="core-integration-section">
+        <div class="container">
+            <div class="core-integration-content">
+                <div class="core-badge">Necesară</div>
+                <h2>Integrare Pe Site-ul Tău</h2>
+                <p class="core-intro">Chatbot-ul se adaugă pe site printr-un script JavaScript simplu. Funcționează pe orice platformă web.</p>
+
+                <div class="integration-code-example">
+                    <div class="code-header">
+                        <span>Exemplu cod integrare</span>
+                    </div>
+                    <pre><code>&lt;script
+  src="https://chatbot.chatinteligent.ro/widget.js"
+  data-site-id="id-ul-tau-unic"
+  data-greeting="Bună! Cu ce te pot ajuta?"&gt;
+&lt;/script&gt;</code></pre>
+                </div>
+
+                <div class="platform-grid">
+                    <div class="platform-item">
+                        <div class="platform-check">✓</div>
+                        <span>WordPress</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-check">✓</div>
+                        <span>Custom HTML/CSS</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-check">✓</div>
+                        <span>React / Vue / Angular</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-check">✓</div>
+                        <span>Shopify</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-check">✓</div>
+                        <span>Wix</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-check">✓</div>
+                        <span>Squarespace</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Integrations -->
+    <section class="integrations-section">
+        <div class="container">
+            <h2 class="integrations-title">Integrări Disponibile</h2>
+
+            <!-- Email Notifications -->
+            <div class="integration-card">
+                <div class="integration-header">
+                    <div class="integration-icon">📧</div>
+                    <div class="integration-info">
+                        <h3>Notificări Email</h3>
+                        <span class="integration-status status-active">Inclusă</span>
+                    </div>
+                </div>
+                <p>Primești email automat când un vizitator lasă date de contact. Emailul include conversația completă pentru context.</p>
+                <ul class="integration-features">
+                    <li>Notificări instant pentru lead-uri noi</li>
+                    <li>Rezumat conversație inclus</li>
+                    <li>Configurezi cine primește emailurile</li>
+                    <li>Personalizare subiect și format</li>
+                </ul>
+            </div>
+
+            <!-- Google Sheets -->
+            <div class="integration-card">
+                <div class="integration-header">
+                    <div class="integration-icon">📊</div>
+                    <div class="integration-info">
+                        <h3>Google Sheets</h3>
+                        <span class="integration-status status-active">Inclusă</span>
+                    </div>
+                </div>
+                <p>Toate cererile de contact sunt salvate automat într-un Google Sheet pentru a avea un backup și pentru analiză.</p>
+                <ul class="integration-features">
+                    <li>Export automat date contact</li>
+                    <li>Acces real-time la toate cererile</li>
+                    <li>Partajare cu echipa ta</li>
+                    <li>Import în alte instrumente (CRM, Excel)</li>
+                </ul>
+            </div>
+
+            <!-- Webhook -->
+            <div class="integration-card">
+                <div class="integration-header">
+                    <div class="integration-icon">🔗</div>
+                    <div class="integration-info">
+                        <h3>Webhook</h3>
+                        <span class="integration-status status-active">Disponibilă</span>
+                    </div>
+                </div>
+                <p>Trimite datele conversațiilor către propriul tău sistem sau alte aplicații prin webhook personalizat.</p>
+                <ul class="integration-features">
+                    <li>POST request la URL-ul tău</li>
+                    <li>Date în format JSON</li>
+                    <li>Trigger: lead nou, conversație încheiată</li>
+                    <li>Conectare cu Zapier, Make.com, n8n</li>
+                </ul>
+            </div>
+
+            <!-- WordPress Plugin -->
+            <div class="integration-card">
+                <div class="integration-header">
+                    <div class="integration-icon">🔌</div>
+                    <div class="integration-info">
+                        <h3>WordPress Plugin</h3>
+                        <span class="integration-status status-development">În dezvoltare</span>
+                    </div>
+                </div>
+                <p>Plugin WordPress dedicat pentru instalare mai rapidă, fără editare cod. Configurare din dashboard-ul WordPress.</p>
+                <ul class="integration-features">
+                    <li>Instalare one-click din admin</li>
+                    <li>Configurare vizuală (fără cod)</li>
+                    <li>Sincronizare automată conținut</li>
+                    <li>Disponibil în următoarele 2 luni</li>
+                </ul>
+            </div>
+
+            <!-- CRM -->
+            <div class="integration-card">
+                <div class="integration-header">
+                    <div class="integration-icon">👥</div>
+                    <div class="integration-info">
+                        <h3>CRM (HubSpot, Pipedrive)</h3>
+                        <span class="integration-status status-planned">Planificat</span>
+                    </div>
+                </div>
+                <p>Integrare directă cu CRM-uri populare pentru a adăuga automat lead-urile noi în pipeline-ul tău de vânzări.</p>
+                <ul class="integration-features">
+                    <li>Import automat contacte în CRM</li>
+                    <li>Sincronizare conversații ca note</li>
+                    <li>Tag-uri automate pe baza sursă</li>
+                    <li>Solicită prin email pentru prioritizare</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Custom Integration -->
+    <section class="custom-integration-section">
+        <div class="container">
+            <div class="custom-integration-content">
+                <h2>Ai Nevoie de o Integrare Personalizată?</h2>
+                <p>Dacă folosești alte instrumente și ai nevoie de o integrare specifică, contactează-ne. Evaluăm fiecare cerere și, dacă este relevantă pentru mai mulți clienți, o putem implementa.</p>
+
+                <div class="custom-note">
+                    <p><strong>Notă despre MVP:</strong> Suntem în stadiu de dezvoltare activă. Prioritizăm integrările pe baza feedback-ului de la clienți. Dacă o integrare este esențială pentru tine, spune-ne — poate influența roadmap-ul nostru.</p>
+                </div>
+
+                <a href="contact.html" class="btn btn-secondary btn-large">
+                    Solicită Integrare
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Section -->
+    <section class="api-section">
+        <div class="container">
+            <div class="api-content">
+                <h2>API pentru Dezvoltatori</h2>
+                <p>Pentru scenarii avansate, oferim acces la API REST pentru a interacționa programatic cu chatbot-ul.</p>
+
+                <div class="api-grid">
+                    <div class="api-card">
+                        <h3>Ce poți face cu API</h3>
+                        <ul>
+                            <li>Trimite mesaje programatic</li>
+                            <li>Citește conversații și lead-uri</li>
+                            <li>Actualizează configurarea chatbot-ului</li>
+                            <li>Integrează în aplicații custom</li>
+                        </ul>
+                    </div>
+
+                    <div class="api-card">
+                        <h3>Documentație</h3>
+                        <ul>
+                            <li>Endpoints REST cu autentificare API key</li>
+                            <li>Rate limiting: 1000 requests/oră</li>
+                            <li>Răspunsuri JSON</li>
+                            <li>Documentare completă disponibilă după demo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="integrations-cta">
+        <div class="container">
+            <div class="integrations-cta-content">
+                <h2>Discutăm Despre Integrările Tale</h2>
+                <p>În demo, îți arătăm cum funcționează integrările și configurăm împreună notificările potrivite pentru firma ta.</p>
+                <a href="index.html#early-access" class="btn btn-primary btn-large">
+                    Programează Demo Gratuit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+
+                <!-- Produs -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Produs</h3>
+                    <ul class="footer-links">
+                        <li><a href="functionalitati.html">Funcționalități</a></li>
+                        <li><a href="cum-functioneaza.html">Cum funcționează</a></li>
+                        <li><a href="integrari.html">Integrări</a></li>
+                        <li><a href="index.html#early-access" class="link-accent">Request Demo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Companie -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Companie</h3>
+                    <ul class="footer-links">
+                        <li><a href="despre.html">Despre noi</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cazuri-utilizare.html">Cazuri de utilizare</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="termeni.html">Termeni și condiții</a></li>
+                        <li><a href="confidentialitate.html">Politică de confidențialitate</a></li>
+                        <li><a href="cookie.html">Politică cookie</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="contact-label">Email:</span>
+                            <a href="mailto:contact@chatinteligent.ro">contact@chatinteligent.ro</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Program:</span>
+                            <span>L-V, 9:00-18:00</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Trust Message -->
+            <div class="footer-trust">
+                <p>Chatbot dezvoltat în România pentru firme de servicii. Configurare asistată, demo fără obligații.</p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chat Inteligent. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

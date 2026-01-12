@@ -1,0 +1,25 @@
+# robots.txt pentru Chat Inteligent
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://chatinteligent.ro/sitemap.xml
+
+# Disallow crawling of form submission endpoints (if any)
+Disallow: /api/
+Disallow: /*?*action=submit
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl-delay for other bots
+User-agent: *
+Crawl-delay: 1
